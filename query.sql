@@ -1,12 +1,12 @@
 -- 1 Selezionare tutti gli studenti nati nel 1990 (160)
 
-SELECT *
+SELECT `name`, `surname`, `date_of_birth`
 FROM `students`
 WHERE YEAR(`date_of_birth`) = 1990;
 
 -- 2 Selezionare tutti i corsi che valgono più di 10 crediti (479)
 
-SELECT * 
+SELECT `name`, `description`, `cfu` 
 FROM `courses`
 WHERE `cfu` > 10
 
@@ -19,7 +19,7 @@ ORDER BY `age` ASC
 
 -- 4 Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 
-SELECT * 
+SELECT `name`, `period`, `year`
 FROM `courses`
 WHERE `period` = 'i semestre'
 AND `year` = 1
@@ -33,7 +33,7 @@ AND `hour` >= '14:00:00'
 
 -- 6 Selezionare tutti i corsi di laurea magistrale (38)
 
-SELECT * 
+SELECT `name`, `level`
 FROM `degrees`
 WHERE `level` = 'magistrale'
 
