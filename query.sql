@@ -12,7 +12,9 @@ WHERE `cfu` > 10
 
 -- Selezionare tutti gli studenti che hanno più di 30 anni
 
-
+SELECT * 
+FROM `students`
+WHERE DATE_SUB(``)
 
 -- Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 
@@ -20,7 +22,10 @@ WHERE `cfu` > 10
 
 -- Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020 (21)
 
-
+SELECT * 
+FROM `exams`
+WHERE `date` = '2020-06-20'
+AND `hour` >= '14:00:00'
 
 -- Selezionare tutti i corsi di laurea magistrale (38)
 
